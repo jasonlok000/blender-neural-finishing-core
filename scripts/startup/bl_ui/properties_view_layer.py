@@ -131,6 +131,8 @@ class VIEWLAYER_PT_eevee_layer_passes_data(ViewLayerButtonsPanel, Panel):
         sub = col.column()
         sub.active = not scene.render.use_motion_blur
         sub.prop(view_layer, "use_pass_vector")
+        if scene.render.use_motion_blur:
+            col.label(text="Vector pass disabled by Motion Blur", icon='INFO')
         col.prop(view_layer, "use_pass_grease_pencil", text="Grease Pencil")
 
         view_layer_eevee = view_layer.eevee

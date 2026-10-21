@@ -1091,6 +1091,8 @@ class CYCLES_RENDER_PT_passes_data(CyclesButtonsPanel, Panel):
         sub = col.column()
         sub.active = not rd.use_motion_blur
         sub.prop(view_layer, "use_pass_vector")
+        if rd.use_motion_blur:
+            col.label(text="Vector pass disabled by Motion Blur", icon='INFO')
         col.prop(view_layer, "use_pass_uv")
         col.prop(view_layer, "use_pass_grease_pencil", text="Grease Pencil")
 
