@@ -54,6 +54,7 @@ _modules = [
     "properties_physics_fluid",
     "properties_physics_softbody",
     "properties_render",
+    "properties_neural_finishing",
     "properties_output",
     "properties_view_layer",
     "properties_scene",
